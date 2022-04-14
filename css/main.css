@@ -5,15 +5,10 @@
 }
 
 h1 {
-  min-height: 120px;
-  width: 90%;
-  max-width: 700px;
-  vertical-align: middle;
   text-align: center;
-  margin: 0 auto;
-  text-decoration: none;
-  color: #fff;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .panel {
@@ -22,38 +17,42 @@ h1 {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  color: #fff;
   margin: 40px auto;
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 15px;
   backdrop-filter: blur(10px);
-}
-
-.btn_button {
-  display: inline-block;
+  padding: 50px;
   width: 50%;
+  box-shadow: rgba(142, 142, 142, 0.19) 0px 6px 15px 0px;
+}
+.panel__content{
+  width: 70%;
+  margin: auto;
+  justify-content: center;
+}
+.btn_button {
   padding: 24px 32px;
-  border: 0;
   text-decoration: none;
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 14px;
   letter-spacing: 2px;
   cursor: pointer;
   text-transform: uppercase;
+  transition: 0.5s;
 }
+
 .btn_button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 
 /* Để ẩn thẻ  */
-.none{
-    display: none;
+.none {
+  display: none;
 }
