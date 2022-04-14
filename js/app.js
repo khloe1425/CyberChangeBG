@@ -1,18 +1,30 @@
-var clickMe = document.querySelector('#clickMe')
-var reset = document.querySelector('#resetForm')
-var body = document.querySelector('body')
-var listColor = ['red', 'blue', 'green', 'yellow', 'pink', 'grey', 'lime']
-body.style.backgroundColor = 'black'
+var clickMe = document.getElementById('clickMe')
+var reset = document.getElementById('resetForm')
+var body = document.getElementById('main')
+var content = document.getElementById("content");
+body.style.backgroundColor = '#000000'
 
-reset.classList.add('none')
+clickMe.addEventListener('click', function () {
+    // The maximum value: FFFFFF 
+    //In JavaScript, add 0x before a hexadecimal number
+    var maxVal = 0xFFFFFF; // 16777215
 
-clickMe.addEventListener('click', function(){
-    var changeClor = parseInt(Math.random() * listColor.length)
-    body.style.backgroundColor = listColor[changeClor]
-    body.style.transition = '1s linear'
+    var randomNumber = Math.random() * maxVal;
+    // convert the floating number to an integer 
+    randomNumber = Math.floor(randomNumber);
+
+    //convert integer to hex
+    var randomColor = randomNumber.toString(16);
+
+    body.style.backgroundColor = "#" + randomColor;
+    body.style.transition = '1s'
     reset.classList.remove('none')
+    content.style.justifyContent = "space-between"
 })
 
-reset.addEventListener('click', function(){
-    location.reload();
+reset.addEventListener('click', function () {
+    body.style.backgroundColor = '#000000'
+    body.style.transition = '1s'
+    reset.classList.add('none')
+    content.style.justifyContent = "center"
 })
